@@ -1,0 +1,38 @@
+{
+  "name": "genpark-autonomous-agent-eval-trajectory-analyzer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Autonomous agent evaluation framework tracking tool call failure rates, step loops, and trajectory hallucination metrics.",
+  "author": "genpark",
+  "category": "agent-evals",
+  "tags": [
+    "agentops",
+    "phoenix",
+    "agent-eval",
+    "trajectory-analyzer",
+    "hallucination-metric"
+  ],
+  "inputs": {
+    "agent_run_id": {
+      "type": "string"
+    },
+    "max_steps_evaluated": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "eval_audit_id": {
+      "type": "string"
+    },
+    "tool_call_success_rate_pct": {
+      "type": "number"
+    },
+    "hallucination_index_score": {
+      "type": "number"
+    },
+    "eval_dashboard_analytics_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
